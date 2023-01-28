@@ -1,0 +1,34 @@
+---
+import '~/assets/styles/base.css';
+
+import MetaTags from '~/components/common/MetaTags.astro';
+import BasicScripts from '~/components/common/BasicScripts.astro';
+
+import { MetaSEO } from '~/types';
+import I18N from '~/config/i18n';
+
+export interface Props {
+  meta?: MetaSEO;
+}
+
+const { meta = {} } = Astro.props;
+const { language = 'en', textDirection = 'ltr' } = I18N;
+---
+
+<!DOCTYPE html>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+  <head>
+    <MetaTags {...meta} />
+  </head>
+
+  <body class="antialiased text-default bg-page tracking-tight">
+    <!-- bg-[url(https://tailwindcss.com/_next/static/media/hero@75.b2469a49.jpg)] dark:bg-none style="background-size: 260%;background-repeat: no-repeat;" -->
+    <slot />
+    <BasicScripts />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>
