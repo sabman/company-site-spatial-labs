@@ -3,8 +3,8 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'SpatialLabs',
 
-  origin: 'https://sabman.github.io',
-  basePathname: '/company-site-spatial-labs',
+  origin: 'https://spatial-labs.dev',
+  basePathname: '/',
   trailingSlash: false,
 
   title: 'SpatialLabs — Applied GeoSpatial',
