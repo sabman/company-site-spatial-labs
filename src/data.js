@@ -3,62 +3,50 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Products',
       links: [
         {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
+          text: '🌍 GeoDB',
+          href: getPermalink('/products/geodb'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
+          text: '🛫 Mövius',
+          href: getPermalink('/products/movius'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Services',
       links: [
         {
-          text: 'Features',
+          text: '🏗️ Geo Data Engineering',
           href: '#',
         },
         {
-          text: 'Pricing',
+          text: '🏋️‍♀️ Big GeoData Processing',
           href: '#',
         },
         {
-          text: 'About us',
+          text: '🧠 GeoAI & ML',
           href: '#',
         },
         {
-          text: 'Contact',
+          text: '🥞 Full Stack GeoDev',
           href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
+        }
       ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
     },
     {
       text: 'Blog',
       href: getBlogPermalink(),
     },
+    {
+      text: 'Contact',
+      href: getPermalink('/company/contact'),
+    }
   ],
   actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'Get in touch', href: 'https://github.com/onwidget/astrowind' }
   ],
 };
   
