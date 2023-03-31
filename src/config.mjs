@@ -3,8 +3,8 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'SpatialLabs',
 
-  origin: 'https://astrowind.vercel.app',
-  basePathname: '/',
+  origin: 'https://sabman.github.io',
+  basePathname: '/company-site-spatial-labs',
   trailingSlash: false,
 
   title: 'SpatialLabs — Applied GeoSpatial',
