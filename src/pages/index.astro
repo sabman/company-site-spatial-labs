@@ -26,15 +26,17 @@ const meta = {
 
   <!-- hero with a background video -->
   <div class="relative bg-black" style="height: 100vh; width: 100vw;">
-    <video class="block dark:hidden absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
-      <source 
-        src="/assets/videos/1-output-3000k.mp4"
-        type="video/mp4" />
+    <video class="block dark:hidden absolute top-0 left-0 w-full h-full object-cover"autoplay muted loop playsinline>
+      <source src="/assets/videos/1-output-3000.webm" type='video/webm; codecs="vp8, vorbis"' />
+      <source src="/assets/videos/1-output-3000.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      <source src="/assets/videos/1-output-3000.ogv" type='video/ogg; codecs="theora, vorbis"' />
+      <img src="/assets/videos/1-output-3000.jpg" />
     </video>
     <video class="hidden dark:block absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
-      <source 
-        src="/assets/videos/dark-coast-night-sm.mp4"
-        type="video/mp4" />
+      <source src="/assets/videos/dark-1-output-3000.webm" type='video/webm; codecs="vp8, vorbis"' />
+      <source src="/assets/videos/dark-1-output-3000.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      <source src="/assets/videos/dark-1-output-3000.ogv" type='video/ogg; codecs="theora, vorbis"' />
+      <img src="/assets/videos/dark-1-output-3000.jpg" />
     </video>
     <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
       <div class="text-center bg-slate-100 bg-opacity-80 rounded-md p-6 dark:bg-slate-900 dark:bg-opacity-80">
@@ -42,7 +44,10 @@ const meta = {
           Applied <span class="text-blue-900 dark:text-blue-100">GeoAI</span>
         </h1>
         <p class="mt-4 text-xl text-grey-800 font-light dark:text-gray-100">
-          We solve <span class="font-medium">high impact problems</span> for our customers with applied <span class="font-medium">Geospatial</span> and <span class="font-medium">AI</span> technologies.<br />We help you to build your own geospatial data pipeline and train your own AI models.<br />We can also help you to deploy your models in production.
+          We solve <span class="font-medium">high impact problems</span> for our customers with applied <span
+            class="font-medium">Geospatial</span
+          > and <span class="font-medium">AI</span> technologies.<br />We build geospatial data pipelines, train,
+          deploy, monitor and retrain Geo AI models.
         </p>
         <!-- button call to action get in touch -->
         <a
