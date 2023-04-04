@@ -19,20 +19,20 @@ export const headerData = {
       text: 'Services',
       links: [
         {
-          text: '🏗️ Geo Data Engineering',
-          href: '#',
+          text: '🏗️ GeoData Engineering',
+          href: '/services/geo-data-engineering',
         },
         {
-          text: '🏋️‍♀️ Big GeoData Processing',
-          href: '#',
+          text: '🏋️‍♀️ Big GeoData',
+          href: '/services/big-geodata-processing',
         },
         {
           text: '🧠 GeoAI & ML',
-          href: '#',
+          href: '/services/geoai-ml',
         },
         {
           text: '🥞 Full Stack GeoDev',
-          href: '#',
+          href: '/services/full-stack-geodev',
         }
       ],
     },
@@ -55,45 +55,46 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Movius', href: 'https://movius.com' },
+        { text: 'GeoDB', href: 'https://getgeodb.com' },
+        // { text: 'Team', href: '#' },
+        // { text: 'Enterprise', href: '#' },
+        // { text: 'Customer stories', href: '#' },
+        // { text: 'Pricing', href: '#' },
+        // { text: 'Resources', href: '#' },
       ],
     },
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
+        { text: 'Developer API', href: '/platform/developer-api' },
+        { text: 'Partners', href: '/platform/partners' },
         { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        // { text: 'Atom', href: '#' },
+        // { text: 'Electron', href: '#' },
+        // { text: 'AstroWind Desktop', href: '#' },
       ],
     },
+    // {
+    //   title: 'Support',
+    //   links: [
+    //     { text: 'Docs', href: '#' },
+    //     { text: 'Community Forum', href: '#' },
+    //     { text: 'Professional Services', href: '#' },
+    //     { text: 'Skills', href: '#' },
+    //     { text: 'Status', href: '#' },
+    //   ],
+    // },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'About', href: '/company/about' },
+        { text: 'Blog', href: '/blog' },
+        { text: 'Careers', href: '/company/careers' },
+        // { text: 'Press', href: '#' },
+        // { text: 'Inclusion', href: '/company/inclusion' },
+        // { text: 'Social Impact', href: '#' },
+        // { text: 'Shop', href: '#' },
       ],
     },
   ],
@@ -102,14 +103,14 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    // { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/spatial-labs-pty-ltd' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/spatial-labs' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    © Spatial Labs Pvt Ltd. All rights reserved.
   `,
 };
