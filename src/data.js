@@ -107,7 +107,7 @@ export const footerData = {
     // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/spatial-labs-pty-ltd' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss') },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/spatial-labs' },
   ],
   footNote: `
