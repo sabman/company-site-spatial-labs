@@ -55,6 +55,7 @@ export const footerData = {
     {
       title: 'Product',
       links: [
+        { text: 'GeoRisk', href: 'https://georisk.ai' },
         { text: 'Movius', href: 'https://movius.com' },
         { text: 'GeoDB', href: 'https://getgeodb.com' },
         // { text: 'Team', href: '#' },
