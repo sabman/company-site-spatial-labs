@@ -18,8 +18,8 @@ Detection of ships is an important task when it comes to congestion control and 
 In this series, we will go over the [ship detection competition](https://huggingface.co/spaces/competitions/ship-detection) organized by [Data Driven Science](https://datadrivenscience.com/). This series is divided into three parts:
 
 - Data wrangling
-- Model training (yolov5)
-- Creating submissions
+- Handling Outliers
+- Model Training
 
 The dataset for this competition can be downloaded from [HuggingFace](https://huggingface.co/datasets/datadrivenscience/ship-detection).
 

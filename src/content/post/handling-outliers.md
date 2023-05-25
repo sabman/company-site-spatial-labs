@@ -8,8 +8,8 @@ tags:
   - deep learning
   - yolo
   - object detection
-# draft: true
-# canonical: https://spatial-labs.dev/ship-detection-competition-part-1
+draft: true
+# canonical: https://spatial-labs.dev/ship-detection-competition-part-2
 ---
 
 <!-- We will export the notebook file to markdown here -->
