@@ -55,9 +55,9 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'GeoRisk', href: 'https://georisk.ai' },
-        { text: 'Movius', href: 'https://movius.com' },
+        { text: 'Movius', href: 'https://movius.netlify.app' },
         { text: 'GeoDB', href: 'https://getgeodb.com' },
+        { text: 'GeoRisk (dev)', href: '#' },
         // { text: 'Team', href: '#' },
         // { text: 'Enterprise', href: '#' },
         // { text: 'Customer stories', href: '#' },

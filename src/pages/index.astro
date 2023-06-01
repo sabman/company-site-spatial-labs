@@ -26,22 +26,25 @@ const meta = {
 
   <!-- hero with a background video -->
   <div class="relative bg-black" style="height: 100vh; width: 100vw;">
-    <video class="block dark:hidden absolute top-0 left-0 w-full h-full object-cover"autoplay muted loop playsinline>
-      <source src="/assets/videos/1-output-3000.webm" type='video/webm; codecs="vp8, vorbis"' />
-      <source src="/assets/videos/1-output-3000.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      <source src="/assets/videos/1-output-3000.ogv" type='video/ogg; codecs="theora, vorbis"' />
+    <video class="block dark:hidden absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
+      <source
+        src="https://github-production-user-asset-6210df.s3.amazonaws.com/1907/238642712-42176c0e-7cc2-41d6-a340-f1e23ea973dc.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
       <img src="/assets/videos/1-output-3000.jpg" />
     </video>
     <video class="hidden dark:block absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
-      <source src="/assets/videos/dark-1-output-3000.webm" type='video/webm; codecs="vp8, vorbis"' />
-      <source src="/assets/videos/dark-1-output-3000.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      <source src="/assets/videos/dark-1-output-3000.ogv" type='video/ogg; codecs="theora, vorbis"' />
+      <source
+        src="https://github-production-user-asset-6210df.s3.amazonaws.com/1907/238642855-7e407d65-2dad-4993-b3c3-5eb6510ab94f.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+
       <img src="/assets/videos/dark-1-output-3000.jpg" />
     </video>
     <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
       <div class="text-center bg-slate-100 bg-opacity-80 rounded-md p-6 dark:bg-slate-900 dark:bg-opacity-80">
         <h1 class="text-5xl font-bold text-gray-800 dark:text-blue-200">
-          Applied <span class="text-blue-900 dark:text-blue-100">GeoAI</span>
+          Applied <span class="text-blue-900 dark:text-blue-100">Geo + AI</span>
         </h1>
         <p class="mt-4 text-xl text-grey-800 font-light dark:text-gray-100">
           We solve <span class="font-medium">high impact problems</span> for our customers with applied <span
@@ -242,7 +245,7 @@ const meta = {
     }}
   >
     <Fragment slot="title">
-      GeoAI<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Report</span>
+      GeoAI<br class="block sm:hidden" /> <span class="sm:whitespace-nowrap">Report</span>
     </Fragment>
 
     <Fragment slot="subtitle">
