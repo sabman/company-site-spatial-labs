@@ -66,11 +66,12 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
+      title: 'Services',
       links: [
-        { text: 'Developer API', href: '/platform/developer-api' },
-        { text: 'Partners', href: '/platform/partners' },
-        { text: 'Professional Services', href: '#' },
+        { text: 'GeoData Eng.', href: '/services/geo-data-engineering' },
+        { text: 'Big Geo', href: '/services/big-geodata-processing' },
+        { text: 'GeoAI & ML', href: '/services/geoai-ml' },
+        { text: 'Full Stack GeoDev', href: '/services/full-stack-geodev' },
         // { text: 'Atom', href: '#' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
