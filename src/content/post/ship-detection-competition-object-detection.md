@@ -2,7 +2,7 @@
 publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 3 (Model Training)
 excerpt: Training Yolov5 for ships detection
-image: ~/assets/images/sabman_a_fleet_of_ship_going_through_a_fjord_with_sun_lighting__258b68c7-9c18-4932-8ee2-635a5d72d328.png
+image: ~/assets/images/258b68c7-9c18-4932-8ee2-635a5d72d328.png
 tags:
   - deep learning
   - yolo
