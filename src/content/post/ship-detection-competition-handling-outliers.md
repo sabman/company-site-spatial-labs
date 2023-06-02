@@ -2,21 +2,26 @@
 publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 2 (Handling Outliers)
 excerpt: Dealing with huge images
-image: ~/assets/images/colors.jpg
+image: ~/assets/images/data-wrangling-thumbnail.png
 tags:
   - deep learning
   - yolo
   - object detection
-canonical: https://spatial-labs.dev/ship-detection-competition-part-2
+category: Ship Detection Competition
 ---
 
 <!-- We will export the notebook file to markdown here -->
-Previously we looked at the data wrangling part (link) of the competition where we converted the data annotations to darknet format. In this section, we will explore how we handled very large images.
+Previously we looked at the [data wrangling part](./ship-detection-competition-data-wrangling) of the competition where we converted the data annotations to darknet format. In this section, we will explore how we handled very large images. Our approach was to find the image outliers and split them into smaller images.
+
+## The problem
+
+Some of the images in the dataset are very large. Some were bigger than 25000x25000 pixels. We could have scaled down the images to a smaller size, but this would have meant that smaller ships would not have been visible.
 
 ## Finding outliers
 
+To find the image size without loading the complete image, we will use `imagesize` library.
 
-```python
+```sh
 !pip install -q imagesize
 ```
 
@@ -34,7 +39,6 @@ from torchvision.io import read_image
 import imagesize
 ```
 
-To find the image size without loading the complete image, we will use `imagesize` library.
 
 
 ```python
@@ -267,10 +271,6 @@ bbox = read_annotation(file, annotations)
 rel_annots = get_all_relative_annots(bbox, matrix_size, stride)
 ```
 
-    Found a problematic bbox at [16948, 19982, 17017, 20081]
-    Found a problematic bbox at [16407, 19883, 16642, 20096]
-
-
 
 ```python
 fig, ax = plt.subplots(len(patches), len(patches[0]), figsize=(16, 16))
@@ -303,18 +303,6 @@ for t in train_outliers:
     split_image_annotations(t, annotations, stride)
 ```
 
-    Found a problematic bbox at [16948, 19982, 17017, 20081]
-    Found a problematic bbox at [16407, 19883, 16642, 20096]
-    Done with patch 0 0
-    Done with patch 1 0
-    Done with patch 2 0
-    Done with patch 0 1
-    Done with patch 1 1
-    Done with patch 2 1
-    Done with patch 0 2
-    Done with patch 1 2
-    Done with patch 2 2
-
 
 
 ```python
@@ -322,51 +310,17 @@ for v in val_outliers:
     split_image_annotations(v, annotations, stride)
 ```
 
-    Found a problematic bbox at [9993, 7393, 10006, 7408]
-    Found a problematic bbox at [293, 19959, 321, 20014]
-    Found a problematic bbox at [112, 19999, 166, 20031]
-    Found a problematic bbox at [6771, 19973, 6826, 20098]
-    Done with patch 0 0
-    Done with patch 1 0
-    Done with patch 2 0
-    Done with patch 0 1
-    Done with patch 1 1
-    Done with patch 2 1
-    Done with patch 0 2
-    Done with patch 1 2
-    Done with patch 2 2
-
-
 
 ```python
 for test_image in test_outliers:
     split_test_image(test_image, stride)
 ```
 
-    Done with patch 0 0
-    Done with patch 1 0
-    Done with patch 2 0
-    Done with patch 0 1
-    Done with patch 1 1
-    Done with patch 2 1
-    Done with patch 0 2
-    Done with patch 1 2
-    Done with patch 2 2
-    Done with patch 0 0
-    Done with patch 1 0
-    Done with patch 2 0
-    Done with patch 0 1
-    Done with patch 1 1
-    Done with patch 2 1
-    Done with patch 0 2
-    Done with patch 1 2
-    Done with patch 2 2
-
 
 Now we will move these in an outliers folder
 
 
-```python
+```sh
 !mkdir ship-detection/outliers
 ```
 
@@ -376,14 +330,6 @@ outliers = train_outliers + val_outliers + test_outliers
 
 outliers
 ```
-
-
-
-
-    ['./ship-detection/train/images/133.png',
-     './ship-detection/val/images/15.png',
-     './ship-detection/test/265.png',
-     './ship-detection/test/305.png']
 
 
 
@@ -406,11 +352,6 @@ outliers
 
 
 
-    ['./ship-detection/train/images/133.png', './ship-detection/val/images/15.png']
-
-
-
-
 ```python
 for outlier in outliers:
     file = outlier.split('/')[-1].split(".")[0]
@@ -420,5 +361,7 @@ for outlier in outliers:
     shutil.move(src, dest)
 ```
 
-Perfect, now we can move on to training the model in the next part
+Perfect, now we can move on to training the model in the next part.
 
+
+|**Next Part: [Training the model](./ship-detection-competition-object-detection)**

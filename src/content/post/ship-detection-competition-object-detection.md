@@ -2,19 +2,17 @@
 publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 3 (Model Training)
 excerpt: Training Yolov5 for ships detection
-image: ~/assets/images/colors.jpg
+image: ~/assets/images/data-wrangling-thumbnail.png
 tags:
   - deep learning
   - yolo
   - object detection
+category: Ship Detection Competition
 # draft: true
-canonical: https://spatial-labs.dev/ship-detection-competition-part-3
+canonical: https://spatial-labs.dev/object-detection-ship-detection-competition
 ---
 
-Previously we looked at the how we are gonna handle the outliers. These outliers would disrupt the objects if not split. 
-In this section, we will see how to train **yolov5** for detection ships.
-
-We will be using the ultralytics [yolov5](https://github.com/ultralytics/yolov5). 
+Previously we looked at [handling outlies](./ship-detection-competition-handling-outliers). These outliers would disrupt the objects if not split. In this section, we will see how to train **yolov5** for detection of ships. We will be using the ultralytics [yolov5](https://github.com/ultralytics/yolov5). 
 
 ## Creating `dataset.yaml`
 
@@ -83,27 +81,19 @@ with open("dataset.yaml", "w") as file:
 We will now clone the repository of [yolov5](https://github.com/ultralytics/yolov5).
 
 
-```python
+```sh
 !git clone https://github.com/ultralytics/yolov5.git
 ```
-
-    Cloning into 'yolov5'...
-    remote: Enumerating objects: 15705, done.[K
-    remote: Counting objects: 100% (33/33), done.[K
-    remote: Compressing objects: 100% (27/27), done.[K
-    remote: Total 15705 (delta 9), reused 23 (delta 6), pack-reused 15672[K
-    Receiving objects: 100% (15705/15705), 14.44 MiB | 23.93 MiB/s, done.
-    Resolving deltas: 100% (10755/10755), done.
     
 
 Now we need to install all the dependencies.
 
-```python
+```sh
 !pip install yolov5/requirements.txt
 ```
 
 Now we can start training.
-```python
+```sh
 !python yolov5/train.py --imgsz 3008 --batch 1 --epochs 50 \
     --data dataset.yaml --weights yolov5l.pt --workers 4
 ```
@@ -117,12 +107,6 @@ The output is too big so we are omitting that. But it will show you where the mo
 
 
 ## Inference
-
-
-```python
-import sys
-print(sys.executable)
-```
 
 
 ```python
@@ -148,7 +132,6 @@ model_result = model(f"ship-detection/val/images/6.png", size=resolution)
 plt.imshow(model_result.render()[0])
 plt.show()
 ```
-
 
     
 ![png](../../../public/assets/object-detection/output.png)

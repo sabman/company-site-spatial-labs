@@ -8,7 +8,7 @@ tags:
   - yolo
   - object detection
 # draft: true
-canonical: https://spatial-labs.dev/ship-detection-competition-part-1
+category: Ship Detection Competition
 ---
 
 ## What am I gonna learn?
@@ -38,9 +38,9 @@ Efficient detection of ships can allow us to optimize the cargo transportation a
 
 In this series, we will go over the [ship detection competition](https://huggingface.co/spaces/competitions/ship-detection) organized by [Data Driven Science](https://datadrivenscience.com/). This series is divided into three parts:
 
-- Data wrangling
-- Handling Outliers
-- Model Training
+- [Data wrangling](./ship-detection-competition-data-wrangling)
+- [Handling Outliers](./ship-detection-competition-handling-outliers)
+- [Model Training](./ship-detection-competition-object-detection)
 
 The dataset for this competition can be downloaded from [HuggingFace](https://huggingface.co/datasets/datadrivenscience/ship-detection) which is a subset of [DOTA dataset](https://captain-whu.github.io/DOTA/dataset.html).
 
