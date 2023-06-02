@@ -3,12 +3,12 @@ publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 2 (Handling Outliers)
 excerpt: Dealing with huge images
 image: ~/assets/images/colors.jpg
-draft: true
+# draft: true
 tags:
   - deep learning
   - yolo
   - object detection
-# canonical: https://spatial-labs.dev/ship-detection-competition-part-2
+canonical: https://spatial-labs.dev/ship-detection-competition-part-2
 ---
 
 <!-- We will export the notebook file to markdown here -->

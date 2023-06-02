@@ -2,18 +2,39 @@
 publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 1 (Data Wrangling)
 excerpt: Data wrangling for ship detection competition
-image: ~/assets/images/colors.jpg
+image: ~/assets/images/data-wrangling-thumbnail.png
 tags:
   - deep learning
   - yolo
   - object detection
-draft: true
-# canonical: https://spatial-labs.dev/ship-detection-competition-part-1
+# draft: true
+canonical: https://spatial-labs.dev/ship-detection-competition-part-1
 ---
+
+## What am I gonna learn?
+By the end of this blog, you will know how to use PyTorch dataset iterator to efficiently convert DOTA format annotations to Darknet format.
+
+You will have built the following api to do the darknet format conversion.
+
+```py
+train_dataset = ShipDetectionDataset(train_files)
+val_dataset = ShipDetectionDataset(val_files)
+
+for img, path, boxes in tqdm(train_dataset):
+    convert2darknet(img, path, boxes)
+
+for img, path, boxes in tqdm(val_dataset):
+    convert2darknet(img, path, boxes, val=True)
+```
+---
+
 
 ## Introduction
 
-Detection of ships is an important task when it comes to congestion control and tracking of ships that have turned of the **AIS** (Automatic Identification System). Efficient detection of ships can allow us to optimize the cargo transportation and track ships whether they are smuggling goods.
+
+Detection of ships is an important task when it comes to congestion control and tracking of ships that have turned off the **AIS** (Automatic Identification System). 
+
+Efficient detection of ships can allow us to optimize the cargo transportation and track ships. Ship tracking using object detection models can be used in law enforcement by altering authorities of ships that are suspected of illegal trafficking of goods.
 
 In this series, we will go over the [ship detection competition](https://huggingface.co/spaces/competitions/ship-detection) organized by [Data Driven Science](https://datadrivenscience.com/). This series is divided into three parts:
 
@@ -21,7 +42,7 @@ In this series, we will go over the [ship detection competition](https://hugging
 - Handling Outliers
 - Model Training
 
-The dataset for this competition can be downloaded from [HuggingFace](https://huggingface.co/datasets/datadrivenscience/ship-detection).
+The dataset for this competition can be downloaded from [HuggingFace](https://huggingface.co/datasets/datadrivenscience/ship-detection) which is a subset of [DOTA dataset](https://captain-whu.github.io/DOTA/dataset.html).
 
 ## Directory Structure
 
@@ -39,9 +60,9 @@ The `train` directory contains training images and likewise, `test` directory co
 
 ## Conversion to Darknet
 
-Since we want to use yolov5, we need to convert the data annotations into darknet format. As mentioned in the documentations, each image width and height are between $0$ and $1$. Thus, widths and heights of the objects are normalized in this range as well. 
+Since we want to use yolov5, we need to convert the data annotations into darknet format. As mentioned in the documentations, each image width and height are between **_0_** and **_1_**. Thus, widths and heights of the objects are normalized in this range as well. 
 
-Darknet format annotations consists of `*.txt` files, one for each image. These files can contain multiple rows, one for each object. These rows are in `class x_center y_center width height` format. Class labels start from $0$ and since there's only one class in our case (ships), $0$ will be the only label here.
+Darknet format annotations consists of `*.txt` files, one for each image. These files can contain multiple rows, one for each object. These rows are in `class x_center y_center width height` format. Class labels start from **_0_** and since there's only one class in our case (ships), **_0_** will be the only label here.
 
 > For more details, refere to [this](https://docs.ultralytics.com/yolov5/train_custom_data/#12-create-labels).
 
@@ -72,7 +93,7 @@ Now we read the `train.csv` in the extras directory.
 
 ```py
 df = pd.read_csv("ship-detection/.extras/train.csv")
-df.head(10)
+df.head(5)
 ```
 
 |    | id    |   xmin |   ymin |   xmax |   ymax |
@@ -82,11 +103,6 @@ df.head(10)
 |  2 | 0.png |   6705 |   3291 |   7060 |   3485 |
 |  3 | 0.png |   6230 |   3442 |   6597 |   3647 |
 |  4 | 0.png |   5501 |    790 |   5552 |    868 |
-|  5 | 0.png |   2076 |   3189 |   2634 |   3797 |
-|  6 | 0.png |   6195 |   3530 |   6246 |   3565 |
-|  7 | 1.png |    613 |     18 |    619 |     31 |
-|  8 | 1.png |    668 |     33 |    681 |     39 |
-|  9 | 1.png |    666 |     26 |    680 |     34 |
 
 We can read annotations of any file as following:
 

@@ -7,8 +7,8 @@ tags:
   - deep learning
   - yolo
   - object detection
-draft: true
-# canonical: https://spatial-labs.dev/ship-detection-competition-part-3
+# draft: true
+canonical: https://spatial-labs.dev/ship-detection-competition-part-3
 ---
 
 Previously we looked at the how we are gonna handle the outliers. These outliers would disrupt the objects if not split. 
