@@ -2,7 +2,7 @@
 publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 2 (Handling Outliers)
 excerpt: Dealing with huge images
-image: ~/assets/images/data-wrangling-thumbnail.png
+image: ~/assets/images/sabman_a_fleet_of_ships_going_through_a_fjord_with_moon_rising__72dc8209-bebf-4c27-ac57-2df728456659.png
 tags:
   - deep learning
   - yolo
