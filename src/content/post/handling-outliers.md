@@ -3,7 +3,7 @@ publishDate: 2023-04-15T00:00:00Z
 title: Ship Detection Competition - Part 2 (Handling Outliers)
 excerpt: Dealing with huge images
 image: ~/assets/images/colors.jpg
-draft: true
+# draft: true
 tags:
   - deep learning
   - yolo
@@ -165,19 +165,6 @@ annotations.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
