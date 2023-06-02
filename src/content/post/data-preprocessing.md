@@ -64,7 +64,7 @@ Since we want to use yolov5, we need to convert the data annotations into darkne
 
 Darknet format annotations consists of `*.txt` files, one for each image. These files can contain multiple rows, one for each object. These rows are in `class x_center y_center width height` format. Class labels start from **_0_** and since there's only one class in our case (ships), **_0_** will be the only label here.
 
-> For more details, refere to [this](https://docs.ultralytics.com/yolov5/train_custom_data/#12-create-labels).
+> For more details, refer to [this](https://docs.ultralytics.com/yolov5/train_custom_data/#12-create-labels).
 
 Now we dive into the coding part:
 
