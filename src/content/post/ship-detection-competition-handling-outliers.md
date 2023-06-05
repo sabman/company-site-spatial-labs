@@ -77,7 +77,7 @@ plt.show()
 
 
     
-![png](../../../public/assets/handling-outliers/output_9_0.png)
+![png](/assets/handling-outliers/output_9_0.png)
     
 
 
@@ -94,7 +94,7 @@ plt.show()
 
 
     
-![png](../../../public/assets/handling-outliers/output_11_0.png)
+![png](/assets/handling-outliers/output_11_0.png)
     
 
 
@@ -111,7 +111,7 @@ plt.show()
 
 
     
-![png](../../../public/assets/handling-outliers/output_13_0.png)
+![png](/assets/handling-outliers/output_13_0.png)
     
 
 
@@ -257,7 +257,7 @@ plt.tight_layout()
 
 
     
-![png](../../../public/assets/handling-outliers/output_28_0.png)
+![png](/assets/handling-outliers/output_28_0.png)
     
 
 
@@ -289,7 +289,7 @@ plt.tight_layout()
 
 
     
-![png](../../../public/assets/handling-outliers/output_31_0.png)
+![png](/assets/handling-outliers/output_31_0.png)
     
 
 

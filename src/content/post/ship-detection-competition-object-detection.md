@@ -134,4 +134,4 @@ plt.show()
 ```
 
     
-![png](../../../public/assets/object-detection/output.png)
+![png](/assets/object-detection/output.png)
