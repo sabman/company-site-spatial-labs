@@ -1,6 +1,6 @@
 ---
 publishDate: 2023-04-15T00:00:00Z
-title: Ship Detection Competition - Part 1 (Data Wrangling)
+title: Ship Detection - Part 1 (Data Wrangling)
 excerpt: Data wrangling for ship detection competition
 image: ~/assets/images/data-wrangling-thumbnail.png
 tags:
