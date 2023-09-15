@@ -46,7 +46,7 @@ export const headerData = {
     }
   ],
   actions: [
-    { type: 'button', text: 'Get in touch', href: 'https://github.com/onwidget/astrowind' }
+    { type: 'button', text: 'Get in touch', href: '/company/contact' }
   ],
 };
   

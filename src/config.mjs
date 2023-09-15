@@ -7,9 +7,9 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'SpatialLabs — Applied GeoSpatial',
+  title: 'SpatialLabs',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    '🚀 Applied GeoSpatial',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
