@@ -1,6 +1,5 @@
 ---
 import Icon from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
 
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
@@ -51,7 +50,7 @@ const { post, url } = Astro.props;
 
       {
         post.image ? (
-          <Picture
+          <picture
             src={post.image}
             class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}

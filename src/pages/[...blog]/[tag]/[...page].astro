@@ -10,6 +10,7 @@ import { TAG_BASE } from '~/utils/permalinks';
 import Headline from '~/components/blog/Headline.astro';
 
 export async function getStaticPaths({ paginate }) {
+  return []
   if (BLOG?.disabled || BLOG?.tag?.disabled) return [];
 
   const posts = await fetchPosts();
